@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  what: MyText
+  from_id: 1
+  to_id: 1
+  when: 2013-09-21 16:10:14
+  classroom_id: 1
+  teacher_id: 1
+  school_id: 1
+
+two:
+  what: MyText
+  from_id: 1
+  to_id: 1
+  when: 2013-09-21 16:10:14
+  classroom_id: 1
+  teacher_id: 1
+  school_id: 1

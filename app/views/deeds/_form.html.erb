@@ -1,0 +1,45 @@
+<%= form_for(@deed) do |f| %>
+  <% if @deed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@deed.errors.count, "error") %> prohibited this deed from being saved:</h2>
+
+      <ul>
+      <% @deed.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :what %><br>
+    <%= f.text_area :what %>
+  </div>
+  <div class="field">
+    <%= f.label :from_id %><br>
+    <%= f.number_field :from_id %>
+  </div>
+  <div class="field">
+    <%= f.label :to_id %><br>
+    <%= f.number_field :to_id %>
+  </div>
+  <div class="field">
+    <%= f.label :when %><br>
+    <%= f.datetime_select :when %>
+  </div>
+  <div class="field">
+    <%= f.label :classroom_id %><br>
+    <%= f.number_field :classroom_id %>
+  </div>
+  <div class="field">
+    <%= f.label :teacher_id %><br>
+    <%= f.number_field :teacher_id %>
+  </div>
+  <div class="field">
+    <%= f.label :school_id %><br>
+    <%= f.number_field :school_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

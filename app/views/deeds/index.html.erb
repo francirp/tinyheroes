@@ -1,0 +1,39 @@
+<h1>Listing deeds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>What</th>
+      <th>From</th>
+      <th>To</th>
+      <th>When</th>
+      <th>Classroom</th>
+      <th>Teacher</th>
+      <th>School</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deeds.each do |deed| %>
+      <tr>
+        <td><%= deed.what %></td>
+        <td><%= deed.from_id %></td>
+        <td><%= deed.to_id %></td>
+        <td><%= deed.when %></td>
+        <td><%= deed.classroom_id %></td>
+        <td><%= deed.teacher_id %></td>
+        <td><%= deed.school_id %></td>
+        <td><%= link_to 'Show', deed %></td>
+        <td><%= link_to 'Edit', edit_deed_path(deed) %></td>
+        <td><%= link_to 'Destroy', deed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deed', new_deed_path %>

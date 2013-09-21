@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>What:</strong>
+  <%= @deed.what %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @deed.from_id %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @deed.to_id %>
+</p>
+
+<p>
+  <strong>When:</strong>
+  <%= @deed.when %>
+</p>
+
+<p>
+  <strong>Classroom:</strong>
+  <%= @deed.classroom_id %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @deed.teacher_id %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @deed.school_id %>
+</p>
+
+<%= link_to 'Edit', edit_deed_path(@deed) %> |
+<%= link_to 'Back', deeds_path %>
